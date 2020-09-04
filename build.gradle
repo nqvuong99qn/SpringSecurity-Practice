@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'Spring'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	// https://mvnrepository.com/artifact/javax.validation/validation-api
+	compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.3.RELEASE'
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+	// https://mvnrepository.com/artifact/org.passay/passay
+	// https://mvnrepository.com/artifact/org.passay/passay
+	compile group: 'org.passay', name: 'passay', version: '1.6.0'
+
+
+
+
+
+
+}
+
+test {
+	useJUnitPlatform()
+}
